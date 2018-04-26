@@ -1,0 +1,47 @@
+.main-header {
+  padding: 0 6%;
+}
+
+.main-navigation {
+  display: flex;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__item {
+  width: 20%;
+  padding: 22px 0;
+
+  &:nth-child(1) {
+    text-align: start;
+  }
+  &:nth-child(1) {
+    text-align: start;
+  }
+  &:nth-child(3) {
+    text-align: end;
+  }
+  &:nth-child(4) {
+    text-align: end;
+  }
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
