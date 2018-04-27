@@ -44,4 +44,15 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
+  transition: .3s;
+  &:hover {
+    color: $blue;
+  }
+  &:active {
+    opacity: .3;
+    color: black;
+  }
+  &.active {
+    color: $brown;
+  }
 }

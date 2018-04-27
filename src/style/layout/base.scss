@@ -38,8 +38,10 @@ body {
   flex-direction: column;
   max-width: 1200px;
   min-width: 768px;
+  min-height: 100vh;
   margin: 0 auto;
   position: relative;
+  box-shadow:  0 5px 15px rgba($color: #000, $alpha: .2);
 }
 
 ul {
@@ -71,4 +73,12 @@ input[type="radio"].visually-hidden {
   border: none;
   font-size: 21px;
   font-weight: bold;
+  transition: .3s;
+  &:hover {
+    background: #604e43;
+  }
+  &:active {
+    background: #503e33;
+    color: rgba($color: #fff, $alpha: .3);
+  }
 }

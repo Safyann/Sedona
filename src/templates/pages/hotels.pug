@@ -1,7 +1,149 @@
 extends ../template
 
 block variables
-  - var title = 'Barbershop Borodinski'
+  - var title = 'Sedona hotels'
 
 block content
   .wrapper
+    .container
+      include ../common/header.pug
+      main.content
+        .filter
+          form(action="/").filter-block
+            h2.filter__title Инфраструктура:
+            ul.filter__list
+              li.filter__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="infrastructure" value="Бассейн" checked)
+                  span.form__chekbox-fake
+                  span.form__label Бассейн
+              li.filter__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="infrastructure" value="Парковка")
+                  span.form__chekbox-fake
+                  span.form__label Парковка
+              li.filter__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="infrastructure" value="Wi-Fi")
+                  span.form__chekbox-fake
+                  span.form__label Wi-Fi
+          form(action="/").filter-block
+            h2.filter__title Тип жилья:
+            ul.filter__list
+              li.filter__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="type-of-housing" value="Гоятиница" checked)
+                  span.form__chekbox-fake
+                  span.form__label Гостиница
+              li.filter__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="type-of-housing" value="Отель" checked)
+                  span.form__chekbox-fake
+                  span.form__label Отель
+              li.filter__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="type-of-housing" value="Апартаменты" checked)
+                  span.form__chekbox-fake
+                  span.form__label Апартаменты
+          form(action="/").filter__price
+            h2.filter__title Стоимость в сутки (Р):
+            .range-filter
+              .price-controls
+                label.min-price от
+                  input(name="min-price" type="text" value="0")
+                label.max-price до
+                  input(name="max-price" type="text" value="3000")
+              .range-controls
+                .scale
+                  .bar
+                .toggle.toggle-min
+                .toggle.toggle-max
+            button(type="submit").filter__btn Показать
+        .result
+          .filter-result
+            span.filter-result__title Найдено: 3
+            span.filter-result-sort Сортировка:
+            ul.sort__list
+              li.sort__item
+                a(href="#").sort__btn.active По цене
+              li.sort__item
+                a(href="#").sort__btn По типу
+              li.sort__item
+                a(href="#").sort__btn По рейтингу
+            ul.sort__btns
+              li.sort__btns__item
+                a(href="#")
+                  svg.sort__btns_img.active
+                    use(xlink:href='img/icons/symbol/sprite.svg#icon-down-dir')
+              li.sort__btns__item
+                a(href="#")
+                  svg.sort__btns_img
+                    use(xlink:href='img/icons/symbol/sprite.svg#icon-up-dir')
+          ul.result-list
+            li.result__item
+              img(src="../../img/content/amara.jpg", alt="").result__img
+              .result-desc
+                a(href="#").hotel-title Amara Resort & Spa
+                .result-row
+                  .type Гостиница
+                  .price От 4000 руб.
+                .result-row
+                  a(href="#").result__btn Подробнее
+                  a(href="#").book__btn Забронировать
+              .rating
+                ul.stars
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                .rating__text Рейтинг: 8,5
+            li.result__item
+              img(src="../../img/content/desert.jpg", alt="").result__img
+              .result-desc
+                a(href="#").hotel-title Desert Quail Inn
+                .result-row
+                  .type Мотель
+                  .price От 3000 руб.
+                .result-row
+                  a(href="#").result__btn Подробнее
+                  a(href="#").book__btn Забронировать
+              .rating
+                ul.stars
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                .rating__text Рейтинг: 8,9
+            li.result__item
+              img(src="../../img/content/vallas.jpg", alt="").result__img
+              .result-desc
+                a(href="#").hotel-title Villas at Poco Diablo
+                .result-row
+                  .type Апартаменты
+                  .price От 2000 руб.
+                .result-row
+                  a(href="#").result__btn Подробнее
+                  a(href="#").book__btn Забронировать
+              .rating
+                ul.stars
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                  li
+                    svg.rating__star
+                      use(xlink:href='img/icons/symbol/sprite.svg#star')
+                .rating__text Рейтинг: 9,2
+  include ../common/footer.pug

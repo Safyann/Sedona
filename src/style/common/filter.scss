@@ -1,0 +1,164 @@
+.filter {
+  background: url(../../img/bg/filter-bg.jpg);
+  display: flex;
+  padding: 35px 6%;
+}
+
+.filter-block {
+  margin-right: 50px;
+}
+
+.filter__title {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form__label {
+  color: white;
+  transition: .6s;
+}
+
+.form__label-chekbox {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form__chekbox {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  &-fake {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+    background: transparent;
+    position: relative;
+    margin-right: 15px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 51%;
+      left: 58%;
+      transform: translate(-50%, -50%);
+      transition: width .3s, height .3s;
+    }
+  }
+}
+
+.form__chekbox:checked {
+  &+.form__chekbox-fake {
+    &:after {
+      background: url(../../img/icons/checkbox-on.svg) 50% no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.filter__price {
+  text-align: center;
+  margin-left: auto;
+}
+
+.range-filter {
+  width: 260px;
+}
+
+.range-controls {
+  position: relative;
+  padding: 20px 0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba($color: white, $alpha: .3);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: white;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 170px;
+}
+
+.price-controls {
+  border: 2px solid white;
+  display: flex;
+  border-radius: 3px;
+}
+
+.price-controls label {
+  font-size: 16px;
+  color: white;
+  width: 50%;
+  &::after {
+    content: "";
+    border-right: 2px solid white;
+  }
+  &:last-child {
+    &::after {
+      content: "";
+      border-right: none;
+    }
+  }
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  font-size: 16px;
+  width: 80px;
+  padding: 8px 10px;
+  text-align: left;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.filter__btn {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 3px;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  transition: .3s;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}

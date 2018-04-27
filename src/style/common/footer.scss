@@ -3,8 +3,11 @@
   justify-content: space-between;
   opacity: .9;
   align-items: center;
+  margin: 0 auto;
   margin-top: -120px;
   background: white;
+  min-width: 768px;
+  max-width: 1200px;
 }
 
 .footer-col {
@@ -28,9 +31,17 @@
   text-align: center;
   margin-right: 6px;
   padding: 13px 0;
+  transition: .3s;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    background: #669ec0;
+  }
+  &:active {
+    background: #5496bd;
   }
 }
 
@@ -38,6 +49,9 @@
   width: 25px;
   height: 25px;
   fill: white;
+  &:active {
+    opacity: .3;
+  }
 }
 
 .logo-link {
@@ -52,4 +66,12 @@
   width: 120px;
   height: 45px;
   margin-left: 5px;
+  transition: .3s;
+  &:hover {
+    fill: $blue;
+  }
+  &:active {
+    opacity: .3;
+    fill: black;
+  }
 }
