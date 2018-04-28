@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <header class="main-header">
+          <nav class="main-navigation"><a class="logo" href="/"><img src="img/logo.png" width="138" height="70" alt="Логотип City of Sedona"></a>
+            <ul class="navigation">
+              <li class="navigation__item"><a class="navigation__link" href="info.html">Информация</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="multimedia.html">Фото и видео</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="map.html">Карта штата</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="hotels.html">Гостиницы</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main class="main-content">
+          <section class="hero">
+            <svg class="hero__text">
+              <use xlink:href="img/icons/symbol/sprite.svg#text-index"></use>
+            </svg>
+            <svg class="triangles triangles--blog" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 56" preserveaspectratio="none">
+              <polygon class="triangle__left" points="0,0 0,56 602,56 300,28 300,0 602,56"></polygon>
+              <polygon class="triangle__right" points="1200,0 1200,56 598,56 900,28 900,0 598,56"></polygon>
+            </svg>
+          </section>
+          <section class="content">
+            <div class="slogan">
+              <h2 class="slogan__title">
+                 СЕДОНА — небольшой городок в АРИЗОНЕ,<br>заслуживающий большего!</h2>
+              <p class="slogan__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            </div>
+            <div class="features">
+              <div class="features__item_first">
+                <div class="features-desc">
+                  <div class="features__title">Настоящий городок</div>
+                  <div class="features__num">- 1 -</div>
+                  <p class="features__text">СЕДОНА — НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+                </div>
+                <div class="features__photo_one"></div>
+              </div>
+              <ul class="features-town">
+                <li class="features-town__item">
+                  <svg class="features__icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#icon-1"></use>
+                    <div class="features__title">Жилье</div>
+                    <p class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                  </svg>
+                </li>
+                <li class="features-town__item">
+                  <svg class="features__icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#icon-2"></use>
+                    <div class="features__title">Еда</div>
+                    <p class="features__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                  </svg>
+                </li>
+                <li class="features-town__item">
+                  <svg class="features__icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#icon-3"></use>
+                    <div class="features__title">Сувениры</div>
+                    <p class="features__text">Не только китайского, но и местного производства!</p>
+                  </svg>
+                </li>
+              </ul>
+              <div class="features__item_second">
+                <div class="features__photo_two"></div>
+                <div class="features-desc">
+                  <div class="features__title">ТАМ ЕСТЬ Мост дьявола</div>
+                  <div class="features__num">- 2 -</div>
+                  <p class="features__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div>
+              </div>
+              <ul class="features-list">
+                <li class="features__item">
+                  <div class="features-desc features-desc_grey">
+                    <div class="features__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</div>
+                    <div class="features__num">- 3 -</div>
+                    <p class="features__text">ВСЕ достопримечательности находятся очень близко</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features-desc features-desc_grey">
+                    <div class="features__title">КРАСИВАЯ ДОРОГА</div>
+                    <div class="features__num">- 4 -</div>
+                    <p class="features__text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features-desc features-desc_grey">
+                    <div class="features__title">МАЛО ТУРИСТОВ</div>
+                    <div class="features__num">- 5 -</div>
+                    <p class="features__text">Большинство едет в гранд каньон и толпится там</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="slogan">
+              <h2 class="slogan__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
+              <p class="slogan__text">
+                 Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+              <button class="btn">ПОИСК ГОСТИНИЦЫ В седоне</button>
+            </div>
+          </section>
+          <section class="map" id="map"></section>
+        </main>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <div class="footer-col"><a class="hashtag" href="#">#VISITSEDONA</a></div>
+      <ul class="footer-col">
+        <li class="sosial__item"><a class="social-btn social-btn-tw" href="#"><span class="visually-hidden">Twitter</span>
+            <svg class="socials__icon">
+              <use xlink:href="img/icons/symbol/sprite.svg#twitter"></use>
+            </svg></a></li>
+        <li class="sosial__item"><a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Facebook</span>
+            <svg class="socials__icon">
+              <use xlink:href="img/icons/symbol/sprite.svg#fb-icon"></use>
+            </svg></a></li>
+        <li class="sosial__item"><a class="social-btn social-btn-yt" href="#"><span class="visually-hidden">YouTube</span>
+            <svg class="socials__icon">
+              <use xlink:href="img/icons/symbol/sprite.svg#youtube"></use>
+            </svg></a></li>
+      </ul>
+      <div class="footer-col"><a class="logo-link" href="https://htmlacademy.ru"><span>Website by</span><span class="visually-hidden">HTML Academy</span>
+          <svg class="logo-html">
+            <use xlink:href="img/icons/symbol/sprite.svg#logo-htmlacademy"></use>
+          </svg></a></div>
+    </footer>
+    <section class="modal modal-search">
+      <form class="modal-search-form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="row">
+          <label for="check-in-date">Дата заезда:</label>
+          <input class="check-in-date" id="check-in-date" type="text" name="check-in-date" value="24 апреля 2017"><a class="icon-calendar" href="#"><span class="visually-hidden">Выбор даты заезда в календаре</span>
+            <svg class="calendar">
+              <use xlink:href="img/icons/symbol/sprite.svg#calendar"></use>
+            </svg></a>
+        </div>
+        <div class="row">
+          <label for="check-out-date">Дата выезда:</label>
+          <input class="check-in-date" id="check-out-date" type="text" name="check-out-date" value="24 июля 2017"><a class="icon-calendar" href="#"><span class="visually-hidden">Выбор даты заезда в календаре</span>
+            <svg class="calendar">
+              <use xlink:href="img/icons/symbol/sprite.svg#calendar">          </use>
+            </svg></a>
+        </div>
+        <div class="row">
+          <label for="adults">Взрослые:</label>
+          <button class="change-count-btn btn-left" type="button" name="search-form-people remove"> <span class="visually-hidden">Минус</span></button>
+          <input class="people-input" id="adults" type="text" name="adults" value="2">
+          <button class="change-count-btn btn-right" type="button" name="search-form-people add"> <span class="visually-hidden">Плюс</span></button>
+          <label for="kids">Дети:</label>
+          <button class="change-count-btn btn-left" type="button" name="search-form-people remove"> <span class="visually-hidden">Минус</span></button>
+          <input class="people-input" id="kids" type="text" name="kids" value="0">
+          <button class="change-count-btn btn-right" type="button" name="search-form-people add"> <span class="visually-hidden">Плюс</span></button>
+        </div>
+        <button class="button-modal-search" type="submit">Найти</button>
+      </form>
+    </section>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbH6qkNd8BBf9nBQvWM0vSUvSk2I3XKTE&amp;callback=initMap"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
