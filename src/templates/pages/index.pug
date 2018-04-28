@@ -73,5 +73,38 @@ block content
               br
               |и мы покажем вам лучшие предложения гостиниц в седоне
             button.btn ПОИСК ГОСТИНИЦЫ В седоне
-        section.map
+        section.map#map
   include ../common/footer.pug
+
+  section.modal.modal-search
+    form.modal-search-form(action="https://echo.htmlacademy.ru" method="get")
+      .row
+        label(for="check-in-date") Дата заезда:
+        input.check-in-date#check-in-date(type="text" name="check-in-date" value="24 апреля 2017")
+        a(href="#").icon-calendar
+          span.visually-hidden Выбор даты заезда в календаре
+          svg.calendar
+            use(xlink:href='img/icons/symbol/sprite.svg#calendar')
+      .row
+        label(for="check-out-date") Дата выезда:
+        input.check-in-date#check-out-date(type="text" name="check-out-date" value="24 июля 2017")
+        a(href="#").icon-calendar
+          span.visually-hidden Выбор даты заезда в календаре
+          svg.calendar
+            use(xlink:href='img/icons/symbol/sprite.svg#calendar')           
+      .row
+        label(for="adults") Взрослые:
+        button.change-count-btn.btn-left(type="button" name="search-form-people remove") 
+          span.visually-hidden Минус
+        input#adults.people-input(type="text" name="adults" value="2")
+        button.change-count-btn.btn-right(type="button" name="search-form-people add") 
+          span.visually-hidden Плюс
+        label(for="kids") Дети:
+        button.change-count-btn.btn-left(type="button" name="search-form-people remove") 
+          span.visually-hidden Минус
+        input#kids.people-input(type="text" name="kids" value="0")
+        button.change-count-btn.btn-right(type="button" name="search-form-people add") 
+          span.visually-hidden Плюс
+      button(type="submit").button-modal-search Найти
+
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbH6qkNd8BBf9nBQvWM0vSUvSk2I3XKTE&callback=initMap")
